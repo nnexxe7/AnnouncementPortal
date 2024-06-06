@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title test</title>
+    <title>AnnouncementPortal</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <p>Hello Test</p>
+{% for listing in listings %}
+    <div class="latest">
+        <h3>{{ listing.title }}</h3>
+        <p>{{ listing.description }}</p>
+        <p>Price: {{ listing.price }}</p>
+        {% if listing.image %}
+            <img src="{{ listing.image.url }}" alt="{{ listing.title }}">
+        {% endif %}
+    </div>
+{% endfor %}
+
 </body>
 </html>
