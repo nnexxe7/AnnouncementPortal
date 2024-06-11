@@ -1,18 +1,14 @@
-.latest img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    align-content: center;
-}
-
-.latest {
-    margin: 10px;
-}
-
 body {
     margin: 0;
     padding: 0;
 }
+
+.logo {
+    color: #23E5DB;
+    scale: 250%;
+    font-weight: 800;
+}
+
 .headbar {
     height: 72px;
     width: 100%;
@@ -25,4 +21,65 @@ body {
 .mid-headbar {
     height: 72px;
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.menu {
+    display: flex;
+    gap: 30px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 16px;
+    background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);
+    align-items: center;
+    font-family: Geomanist, Arial, sans-serif;
+}
+
+.menu :hover {
+    color: #7F9799;
+}
+
+.menu-item1 {
+    margin-right: 15px;
+}
+
+.menu-item1 i {
+    margin-right: 20px;
+    scale: 125%;
+}
+
+.menu-item2 i {
+    margin-right: 10px;
+    scale: 125%;
+}
+
+.menu-item3 i {
+    margin-right: 10px;
+    scale: 125%;
+}
+
+.add {
+    color: #002F34;
+    box-sizing: border-box;
+    margin-right: 20px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 6px;
+    border: 5px solid #FFFFFF;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 10px 22px 8px;
+    min-height: 48px;
+    font-family: Geomanist, Arial, sans-serif;
+}
+
+.add:hover {
+    background-color: #002F34;
+    color: #FFFFFF;
+    border: 5px solid #FFFFFF;
+}
+
