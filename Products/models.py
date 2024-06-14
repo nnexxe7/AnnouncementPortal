@@ -7,12 +7,19 @@ from django.dispatch import receiver
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='listing_categories/', default='listing_categories/default_category.jpg')
 
     class Meta:
         ordering = ['name']
 
     def __str__(self):
         return self.name
+
+    def delete(self, *args, **kwargs):
+        if self.image:
+            if os.path.isfile(self.image.path):
+                os.remove(self.image.path)
+        super().delete(*args, **kwargs)
 
 class Listing(models.Model):
     title = models.CharField(max_length=200)
@@ -33,6 +40,12 @@ class Listing(models.Model):
         super().delete(*args, **kwargs)
 
 @receiver(post_delete, sender=Listing)
+def delete_listing_image(instance, **kwargs):
+    if instance.image:
+        if os.path.isfile(instance.image.path):
+            os.remove(instance.image.path)
+
+@receiver(post_delete, sender=Category)
 def delete_listing_image(instance, **kwargs):
     if instance.image:
         if os.path.isfile(instance.image.path):

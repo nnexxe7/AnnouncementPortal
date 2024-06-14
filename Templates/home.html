@@ -15,7 +15,14 @@
 
 <div class="categories">
     <div class="categories-text">Main categories</div>
+    <ul>
+    {% for category in categories %}
+        <img src="{{ category.image.url }}" alt="{{ category.name }}">
+        <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
 </div>
+
 
 
 {% for listing in listings %}
