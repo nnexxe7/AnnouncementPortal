@@ -9,9 +9,6 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='listing_categories/', default='listing_categories/default_category.jpg')
 
-    class Meta:
-        ordering = ['name']
-
     def __str__(self):
         return self.name
 

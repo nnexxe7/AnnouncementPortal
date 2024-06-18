@@ -187,6 +187,7 @@ ul {
     padding: 0;
     justify-content: start;
 }
+
 li {
     margin: 35px 5px 20px;
     text-align: center;
@@ -216,7 +217,6 @@ li:nth-child(8n+6) img {
     background: #CEDDFF;
 }
 
-
 li:nth-child(8n+7) img {
     background: #C8F8F6;
 }
@@ -225,20 +225,19 @@ li:nth-child(8n+8) img {
     background: #FFD6C9;
 }
 
-
 li:hover .category-name {
     background-color: #002F34;
     color: white;
 }
+
 .category-name {
     font-size: 16px;
     font-weight: 600;
     font-family: Geomanist, Arial, sans-serif;
     cursor: pointer;
     display: inline-block;
-    max-width: 88px;
+    max-width: 120px;
     word-wrap: break-word;
-
 }
 
 li img {
