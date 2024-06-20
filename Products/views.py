@@ -9,3 +9,19 @@ def home(request):
         'listings': listings,
         'categories': categories,
     })
+
+
+def search_results(request):
+    query = request.GET.get('query')
+    location = request.GET.get('location')
+    listings = Listing.objects.all()
+
+    if query:
+        listings = listings.filter(title__icontains=query)
+
+    context = {
+        'listings': listings,
+    }
+
+    return render(request, 'search_results.html', context)
+

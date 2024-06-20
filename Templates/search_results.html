@@ -1,0 +1,15 @@
+{% block content %}
+    <h1>Search Results</h1>
+    <ul>
+        {% for listing in listings %}
+            <li>
+                <h2>{{ listing.title }}</h2>
+                <img src="{{ listing.image.url }}" alt="{{ listing.title }}" style="max-width:200px;">
+                <p>Price: ${{ listing.price }}</p>
+                <p>{{ listing.description }}</p>
+            </li>
+        {% empty %}
+            <li>No results found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
