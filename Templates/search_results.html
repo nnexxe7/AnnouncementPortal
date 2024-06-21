@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnnouncementPortal</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.cdnfonts.com/css/geomanist" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/Arial" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+{% include 'navbar.html' %}
 {% block content %}
     <h1>Search Results</h1>
     <ul>
@@ -13,3 +25,5 @@
         {% endfor %}
     </ul>
 {% endblock %}
+</body>
+</html>

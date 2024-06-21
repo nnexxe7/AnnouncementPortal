@@ -240,7 +240,7 @@ li:hover .category-name {
     word-wrap: break-word;
 }
 
-li img {
+.categories img {
     display: block;
     background: #3A77FF;
     box-sizing: border-box;
