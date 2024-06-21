@@ -95,8 +95,12 @@ body {
     height: 102px;
     width: 50%;
     display: grid;
-    grid-template-columns: 2fr 1fr auto;
     align-items: end;
+}
+
+.search-container form {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
 }
 
 .search-box, .location-box, .search-button {
