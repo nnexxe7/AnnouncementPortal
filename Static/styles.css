@@ -19,6 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .menu {
@@ -52,6 +53,11 @@ body {
 .menu-item3 i {
     margin-right: 10px;
     scale: 125%;
+}
+
+.menu-item3 a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .add {
@@ -189,7 +195,7 @@ ul {
     flex-wrap: wrap;
     max-width: 50%;
     padding: 0;
-    justify-content: start;
+    justify-content: center;
 }
 
 li {
@@ -250,10 +256,11 @@ li:hover .category-name {
     box-sizing: border-box;
     border-radius: 50%;
     flex-shrink: 0;
-    margin: 0px 19px 28px;
+    margin: 0px 20px 30px;
     width: 88px;
     cursor: pointer;
 }
+
 
 
 

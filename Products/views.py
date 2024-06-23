@@ -25,3 +25,6 @@ def search_results(request):
 
     return render(request, 'search_results.html', context)
 
+
+def login(request):
+    return render(request, 'login.html')
