@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-{% include 'navbar.html' %}
-{% include 'search.html' %}
+{% include 'Components/navbar.html' %}
+{% include 'Components/info.html' %}
+{% include 'Components/search.html' %}
 
 
 <div class="categories">
@@ -26,6 +27,7 @@
 </div>
 
 
+<div class="categories-text">Last added</div>
 {% for listing in listings %}
     <div class="latest">
         <h3>{{ listing.title }}</h3>
